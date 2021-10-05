@@ -3,6 +3,8 @@ package br.edu.ifsp.scl.sdm.pa1.livros
 import br.edu.ifsp.scl.sdm.pa1.livros.databinding.ActivityMainBinding
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ArrayAdapter
 
 import br.edu.ifsp.scl.sdm.pa1.livros.model.Livro
@@ -28,6 +30,21 @@ class MainActivity : AppCompatActivity() {
                 livrosStringList
             }
         )
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when(item.itemId){
+        R.id.adicionarLivroMI ->{
+
+            true
+        }
+        else ->{
+            false
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

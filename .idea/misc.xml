@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/PosGraduacao/Livros/app/src/main/res/layout/activity_livro.xml" value="0.20742753623188406" />
         <entry key="..\:/PosGraduacao/Livros/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/PosGraduacao/Livros/app/src/main/res/layout/layout_livro.xml" value="0.36666666666666664" />
+        <entry key="..\:/PosGraduacao/Livros/app/src/main/res/menu/menu_main.xml" value="0.36614583333333334" />
       </map>
     </option>
   </component>
