@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/PosGraduacao/Livros/app/src/main/res/layout/activity_livro.xml" value="0.20742753623188406" />
+        <entry key="..\:/PosGraduacao/Livros/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.22135416666666666" />
+        <entry key="..\:/PosGraduacao/Livros/app/src/main/res/layout/activity_livro.xml" value="0.5" />
         <entry key="..\:/PosGraduacao/Livros/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/PosGraduacao/Livros/app/src/main/res/layout/layout_livro.xml" value="0.36666666666666664" />
+        <entry key="..\:/PosGraduacao/Livros/app/src/main/res/menu/context_menu_main.xml" value="0.20520833333333333" />
         <entry key="..\:/PosGraduacao/Livros/app/src/main/res/menu/menu_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/PosGraduacao/Livros/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22135416666666666" />
       </map>
     </option>
   </component>
