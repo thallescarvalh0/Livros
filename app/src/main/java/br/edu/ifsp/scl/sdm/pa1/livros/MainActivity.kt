@@ -9,7 +9,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
-import android.widget.ArrayAdapter
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import br.edu.ifsp.scl.sdm.pa1.livros.adapter.LivrosAdapter
@@ -40,8 +39,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when(item.itemId){
-        R.id.adicionarLivroMI ->{
-            livroActivityResultLauncher.launch(Intent(this, LivroActivity::class.java))
+        R.id.sairMI ->{
+            finish()
             true
         }
         else ->{
@@ -81,6 +80,17 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
+        }
+
+        activityMainBinding.livrosLv.setOnItemClickListener{ _, _ ,posicao, _ ->
+            val livro = livrosList[posicao]
+            val consultarLivroIntent = Intent(this, LivroActivity::class.java)
+            consultarLivroIntent.putExtra(EXTRA_LIVRO, livro)
+            startActivity(consultarLivroIntent)
+        }
+
+        activityMainBinding.adicionarLivroFab.setOnClickListener{
+            livroActivityResultLauncher.launch(Intent(this, LivroActivity::class.java))
         }
 
         registerForContextMenu(activityMainBinding.livrosLv)

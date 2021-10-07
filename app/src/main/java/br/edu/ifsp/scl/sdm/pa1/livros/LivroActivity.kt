@@ -4,6 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.ifsp.scl.sdm.pa1.livros.databinding.ActivityLivroBinding
 import android.os.Bundle
+import android.view.View
+import androidx.core.view.forEach
+import androidx.core.view.forEachIndexed
+import androidx.core.view.isVisible
 import br.edu.ifsp.scl.sdm.pa1.livros.model.Livro
 
 class LivroActivity: AppCompatActivity() {
@@ -42,13 +46,19 @@ class LivroActivity: AppCompatActivity() {
 
         livro = intent.getParcelableExtra(MainActivity.EXTRA_LIVRO)!!
         posicao = intent.getIntExtra(MainActivity.EXTRA_POSICAO, -1)
-        if (livro != null && posicao != -1){
+        if (livro != null){
             livroActivityBinding.tituloEt.setText(livro.titulo)
             livroActivityBinding.isbnEt.setText(livro.isbn)
             livroActivityBinding.primeiroAutorEt.setText(livro.primeiroAutor)
             livroActivityBinding.editoraEt.setText(livro.editora)
             livroActivityBinding.edicaoEt.setText(livro.edicao.toString())
             livroActivityBinding.numPagEt.setText(livro.paginas.toString())
+            if (posicao == -1){
+                livroActivityBinding.root.forEachIndexed { index, view ->
+                    livroActivityBinding.root.getChildAt(index).isEnabled = false
+                }
+                livroActivityBinding.btnSalvar.visibility = View.GONE
+            }
         }
 
     }
